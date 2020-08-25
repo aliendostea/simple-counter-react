@@ -1,38 +1,226 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  background-color: #f3f3f3;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 50%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.parent-container{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container{
+  width: 50rem;
+  display: grid;
+  border-radius: 5rem;
+  grid-row-gap: 2rem;
+  padding: 5rem;
+  background-color: #ffffff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.counter {
+  display: flex;
+  justify-content: space-between;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #6d5d4b;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+nav ul {
+  list-style: none;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  width: auto;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+b {
+  font-weight: 700;
+}
+
+::-moz-selection {
+  color: #170525;
+  background-color: #56afd2;
+}
+
+::selection {
+  color: #170525;
+  background-color: #56afd2;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #56afd2;
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: #170525;
+}
+
+.heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.heading--big {
+  font-size: 10rem;
+  font-weight: 800;
+  color: #170525;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .heading--big {
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 56.25em) and (max-width: 56.25em) {
+  .heading--big {
+    font-size: 7rem;
   }
+}
+
+.heading--medium {
+  font-size: 5rem;
+  color: #170525;
+}
+
+.heading--small {
+  font-size: 3.5rem;
+  color: #170525;
+}
+
+.btn {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.53px;
+  color: #56afd2;
+  text-decoration: none;
+  white-space: nowrap;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .btn {
+    font-size: 1.1rem;
+  }
+}
+
+.btn--medium {
+  font-size: 1.5rem;
+  padding: 1.5rem 2.8rem;
+  border-radius: 5rem;
+  border: 2px solid #56afd2;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  color: #725e38;
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  -webkit-transform: translateY(-1px);
+  transform: translateY(-1px);
+}
+
+.btn-big {
+  color: #f9f7f6;
+  padding: 1.9rem 2.8rem;
+  border-radius: 5rem;
+  border: 2px solid #56afd2;
+  background-color: #56afd2;
+}
+
+.btn-big:hover {
+  border: 2px solid #2a667e;
+  background-color: #2a667e;
+  color: #f9f7f6;
+
+}
+
+.btn-medium {
+  color: #f9f7f6;
+  font-size: 1.5rem;
+  padding: 1.5rem 2.8rem;
+  border-radius: 5rem;
+  border: 2px solid #56afd2;
+  background-color: #56afd2;
+}
+
+.btn-medium:hover {
+  border: 2px solid #54483a;
+  background-color: #54483a;
+}
+
+.btn--red {
+  border: 2px solid #8b2056;
+  color: #8b2056;
+  background-color: transparent; 
+}
+
+.btn--red:hover{
+  border: 2px solid #741846;
+  color: #ececec;
+  background-color: #741846; 
+
+}
+
+.btn--green {
+  border: 2px solid #1c8a84;
+  color: #ececec;
+  background-color: #1c8a84;
 }
